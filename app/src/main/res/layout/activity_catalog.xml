@@ -12,85 +12,89 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-            <ImageButton
-                android:id="@+id/game1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
-            <ImageButton
-                android:id="@+id/game2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
+                <ImageButton
+                    android:id="@+id/game1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-            <ImageButton
-                android:id="@+id/game3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
-        </LinearLayout>
+                <ImageButton
+                    android:id="@+id/game2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/game3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </TableRow>
 
-            <ImageButton
-                android:id="@+id/game4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
-            <ImageButton
-                android:id="@+id/game5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
+                <ImageButton
+                    android:id="@+id/game4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-            <ImageButton
-                android:id="@+id/game6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
-        </LinearLayout>
+                <ImageButton
+                    android:id="@+id/game5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/game6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </TableRow>
 
-            <ImageButton
-                android:id="@+id/game7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
-            <ImageButton
-                android:id="@+id/game8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
+                <ImageButton
+                    android:id="@+id/game7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-            <ImageButton
-                android:id="@+id/game9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:srcCompat="@tools:sample/avatars" />
-        </LinearLayout>
+                <ImageButton
+                    android:id="@+id/game8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageButton
+                    android:id="@+id/game9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </TableRow>
+
+        </TableLayout>
 
     </LinearLayout>
 </LinearLayout>
