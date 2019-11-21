@@ -69,4 +69,6 @@ public class GameActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+    public void hyj() {
+    }
 }
