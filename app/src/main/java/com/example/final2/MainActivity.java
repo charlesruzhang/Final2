@@ -27,4 +27,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    // CS 125 hahha
 }
