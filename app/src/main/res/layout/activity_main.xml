@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/startGame"
-        android:layout_width="128"
-        android:layout_height="64"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="18dp"
