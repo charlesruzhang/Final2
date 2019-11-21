@@ -1,6 +1,6 @@
 package com.example.final2;
 
-import Game;
+import androidx.appcompat.app.AppCompatActivity;
 
-public final class GameLevel5 extends Game {
+public final class GameLevel5 extends AppCompatActivity {
 }

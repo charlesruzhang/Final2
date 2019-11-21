@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * This is the page for all games.
  */
 public class CatalogActivity extends AppCompatActivity {
-    final int countGame = 9;
+    //final int countGame = 9;
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
