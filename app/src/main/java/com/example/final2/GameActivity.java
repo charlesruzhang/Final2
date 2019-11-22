@@ -69,4 +69,7 @@ public class GameActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+    private void exit() {}
+
+    private void hint() {}
 }

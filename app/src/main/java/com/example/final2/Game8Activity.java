@@ -1,13 +1,14 @@
 package com.example.final2;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public final class GameLevel6 extends AppCompatActivity {
+import android.os.Bundle;
+
+public class Game8Activity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_game8);
     }
 }
