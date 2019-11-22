@@ -31,41 +31,49 @@ public class CatalogActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Game1Activity.class);
             startActivity(intent);
         });
+
         ImageButton game2 = findViewById(R.id.game2);
         game2.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game2Activity.class);
             startActivity(intent);
         });
+
         ImageButton game3 = findViewById(R.id.game3);
         game3.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game3Activity.class);
             startActivity(intent);
         });
+
         ImageButton game4 = findViewById(R.id.game4);
         game4.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game4Activity.class);
             startActivity(intent);
         });
+
         ImageButton game5 = findViewById(R.id.game5);
         game5.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game5Activity.class);
             startActivity(intent);
         });
+
         ImageButton game6 = findViewById(R.id.game6);
         game6.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game6Activity.class);
             startActivity(intent);
         });
+
         ImageButton game7 = findViewById(R.id.game7);
         game7.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game7Activity.class);
             startActivity(intent);
         });
+
         ImageButton game8 = findViewById(R.id.game8);
         game8.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game8Activity.class);
             startActivity(intent);
         });
+
         ImageButton game9 = findViewById(R.id.game9);
         game9.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game9Activity.class);

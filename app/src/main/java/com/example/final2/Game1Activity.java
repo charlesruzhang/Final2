@@ -11,6 +11,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,13 +42,25 @@ public class Game1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game1);
+        setTitle("GAME1: Drinking Water");
         setInitialViews();
+
         ImageView full = findViewById(R.id.full);
         ImageView half = findViewById(R.id.half);
         ImageView empty = findViewById(R.id.empty);
         full.setVisibility(View.VISIBLE);
         half.setVisibility(View.GONE);
         empty.setVisibility(View.GONE);
+
+        //useless button
+        Button drinkButton = findViewById(R.id.drinkbutton);
+        Button pourButton = findViewById(R.id.pourbutton);
+        drinkButton.setOnClickListener(unused -> {
+            drinkButton.setText("It is too Hot");
+        });
+        pourButton.setOnClickListener(unused -> {
+            pourButton.setText("You could not pour it");
+        });
         mySensorListener = new TestSensorListener();
         mySensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         myAccelerometer = mySensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -85,7 +98,7 @@ public class Game1Activity extends AppCompatActivity {
             ImageView empty = findViewById(R.id.empty);
 
 
-            if (half.getVisibility() == View.VISIBLE && event.values[1] < -accNumber
+            if (half.getVisibility() == View.VISIBLE && event.values[1] < (-1 * accNumber)
                     && sensorInfotext.getText().toString().equals("Drink it again")) {
                 sensorInfotext.setText("tada finish");
                 half.setVisibility(View.GONE);
@@ -94,8 +107,8 @@ public class Game1Activity extends AppCompatActivity {
 
             if (half.getVisibility() == View.VISIBLE && event.values[1] > accNumber) {
                 sensorInfotext.setText("Drink it again");
-            } else if (event.values[1] < -accNumber && full.getVisibility() == View.VISIBLE) {
-                sensorInfotext.setText("Drink the Water");
+            } else if (event.values[1] < (-1 * accNumber) && full.getVisibility() == View.VISIBLE) {
+                sensorInfotext.setText("Drink Water");
                 full.setVisibility(View.GONE);
                 half.setVisibility(View.VISIBLE);
             }
