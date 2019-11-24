@@ -2,13 +2,78 @@ package com.example.final2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
 
-public class Game3Activity extends AppCompatActivity {
+/**
+ * game3: using volume button to pass the game.
+ * initially set to 0
+ * start the music
+ * some hints to increase the volume and then decrease it.
+ */
+public class Game3Activity extends AppCompatActivity implements VolumeChangeObserver.VolumeChangeListener {
+    private MediaPlayer mp = new MediaPlayer();
+
+    private final static String TAG = "TEST";
+
+    private VolumeChangeObserver myObserver;
+
+    private boolean playFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game3);
+        Button playButton = findViewById(R.id.playbutton);
+
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.quit);
+
+
+        playButton.setOnClickListener(unused -> {
+            mp.start();
+            playFlag = true;
+        });
+
+
+        myObserver = new VolumeChangeObserver(this);
+        myObserver.setVolumeChangeListener(this);
+        int initVolume = myObserver.getCurrentVolume();
+        Log.e(TAG, "initVolume = " + initVolume);
+    }
+
+    /**
+     * with media player.
+     */
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mp != null) {
+            mp.stop();
+            mp.release();
+        }
+    }
+
+    protected void onPause() {
+        myObserver.unregisterReciver();
+        super.onPause();
+    }
+
+    protected void onResume() {
+        myObserver.registerReceiver();
+        super.onResume();
+    }
+
+    public void VolumeChanged(int volume) {
+        TextView a = findViewById(R.id.text);
+        Log.e(TAG, "onVolumeChanged()--->volume = " + volume);
+        if (playFlag) {
+            if (volume > 13) {
+                a.setText("TOO LOUD");
+            } else if (volume < 3 && a.getText().toString().equals("TOO LOUD")) {
+                a.setText("Too Low");
+            }
+        }
     }
 }
