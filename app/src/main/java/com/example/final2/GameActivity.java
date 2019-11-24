@@ -20,10 +20,6 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
         Intent intent = getIntent();
         gameIndex = intent.getIntExtra("gameIndex", -1);
-        runGame(gameIndex);
-    }
-    private void runGame(int index) {
-
     }
     private void gameEnd() {
         //writeFile(gameIndex);
