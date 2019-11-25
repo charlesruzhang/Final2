@@ -8,7 +8,8 @@ import android.media.AudioManager;
 import android.util.Log;
 
 import java.lang.ref.WeakReference;
-
+// for activity 3
+// get phone's volume
 public class VolumeChangeObserver {
     private static final String VOLUME_CHANGED_ACTION = "android.media.VOLUME_CHANGED_ACTION";
 
