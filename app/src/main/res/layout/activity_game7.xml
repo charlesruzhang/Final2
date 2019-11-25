@@ -5,5 +5,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Game7Activity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/testtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!" />
+
+        <Button
+            android:id="@+id/d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="do" />
+
+        <Button
+            android:id="@+id/r"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="re" />
+
+        <Button
+            android:id="@+id/m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mi" />
+
+        <Button
+            android:id="@+id/f"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fa" />
+
+        <Button
+            android:id="@+id/s"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="so" />
+
+        <Button
+            android:id="@+id/l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="la" />
+
+        <Button
+            android:id="@+id/x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ti" />
+
+        <Button
+            android:id="@+id/resetMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="playing music again" />
+
+        <Button
+            android:id="@+id/resetButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="reset" />
+
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="finish" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
