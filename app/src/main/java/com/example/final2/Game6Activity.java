@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -15,10 +16,11 @@ public class Game6Activity extends AppCompatActivity {
     private int click = 0;
     private TextView timer;
     private Button start;
+    private Button clickButton;
+    private TextView win;
     private CountDownTimer countDownTimer;
     private long timeLeft = 10000;
     private boolean timerRunning = false;
-    private int clickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class Game6Activity extends AppCompatActivity {
         timer = findViewById(R.id.timer);
         start = findViewById(R.id.start);
         start.setOnClickListener(v -> startStop());
+        clickButton = findViewById(R.id.clickButton);
+        clickButton.setOnClickListener(v -> clickCounting());
+        win = findViewById(R.id.winSignal);
     }
 
     private void startStop() {
@@ -67,6 +72,27 @@ public class Game6Activity extends AppCompatActivity {
             timeLeft = 10000;
             start.setText("start");
             timerRunning = false;
+            if (click == 6) {
+                click = 0;
+                win.setText("you pass");
+                win.setVisibility(View.VISIBLE);
+            } else {
+                click = 0;
+                win.setText("try again");
+                win.setVisibility(View.VISIBLE);
+            }
         }
+    }
+
+    private void clickCounting() {
+        if (timerRunning) {
+            click++;
+        }
+        int wide = findViewById(R.id.relativeLayout).getWidth() - clickButton.getWidth();
+        int height = findViewById(R.id.relativeLayout).getHeight() - clickButton.getHeight();
+        int setX = (int) (Math.random() * wide);
+        int setY = (int) (Math.random() * height);
+        clickButton.setX(setX);
+        clickButton.setY(setY);
     }
 }
