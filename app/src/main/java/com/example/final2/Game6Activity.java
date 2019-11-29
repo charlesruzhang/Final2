@@ -34,6 +34,8 @@ public class Game6Activity extends AppCompatActivity {
         clickButton = findViewById(R.id.clickButton);
         clickButton.setOnClickListener(v -> clickCounting());
         win = findViewById(R.id.winSignal);
+        hintButton = findViewById(R.id.hintButton);
+        hintButton.setOnClickListener(v -> showHint());
     }
 
     private void startStop() {
@@ -96,6 +98,12 @@ public class Game6Activity extends AppCompatActivity {
         int setY = (int) (Math.random() * height);
         clickButton.setX(setX);
         clickButton.setY(setY);
+    }
+
+    private void showHint() {
+        Hint dialog = new Hint();
+        dialog.addHint("press click button 6 times in 10 seconds");
+        dialog.show(getSupportFragmentManager(), "Hint");
     }
 }
 

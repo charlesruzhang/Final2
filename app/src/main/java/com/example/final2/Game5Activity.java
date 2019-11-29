@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /** guessing words game.
- * guessing a word between 0 to 99
+ * guessing a word between 0 and 99
  * return the input is bigger or smaller than the generated random word
  * 7 chance to guess
  */
@@ -58,7 +58,7 @@ public class Game5Activity extends AppCompatActivity {
     /** enter your hint for this level in this method. */
     private void showHint() {
         Hint dialog = new Hint();
-        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.addHint("the number is between 0 and 99.");
         dialog.show(getSupportFragmentManager(), "Hint");
     }
 }

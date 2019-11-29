@@ -1,7 +1,20 @@
 important announcement here...
-(with date and updated information
+(with date and name
 
 
-11.29
+11.29 aileen
 unfinished game: 4, 8, 9
-hint is added for every game, please type hint in the textView "hint" in each game UI
+
+hint is added for every game, please add your hints:
+
+    for finished game:
+        -please add your hint as String in the showHint() method towards the end of each GameXActivity class
+         (reference: Game6Activity
+        -please check your UI to make sure that the hint button is added properly
+
+    for unfinished game (game 4, 8, 9):
+        -program and UI for hint button have been added
+        -you may find
+         android:layout_below="@id/hintButton"
+         helpful in designing UI
+         (reference: activity_game1
