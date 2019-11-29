@@ -66,13 +66,14 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
     }
 
     public void VolumeChanged(int volume) {
-        TextView a = findViewById(R.id.text);
+        TextView loudandlow = findViewById(R.id.loudandlow);
         Log.e(TAG, "onVolumeChanged()--->volume = " + volume);
+        Log.e(TAG, playFlag+"");
         if (playFlag) {
             if (volume > 13) {
-                a.setText("TOO LOUD");
-            } else if (volume < 3 && a.getText().toString().equals("TOO LOUD")) {
-                a.setText("Too Low");
+                loudandlow.setText("TOO LOUD");
+            } else if (volume < 3 && loudandlow.getText().toString().equals("TOO LOUD")) {
+                loudandlow.setText("Too Low");
             }
         }
     }

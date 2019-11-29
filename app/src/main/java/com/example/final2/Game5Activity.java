@@ -3,6 +3,7 @@ package com.example.final2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +23,7 @@ public class Game5Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game5);
         answer = (int) (Math.random() * 100);
+        Log.e("TEST", answer+"");
         TextView input = findViewById(R.id.input);
         TextView compare = findViewById(R.id.comparasion);
         Button submit = findViewById(R.id.submit);
