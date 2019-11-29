@@ -1,6 +1,7 @@
 package com.example.final2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -18,6 +19,7 @@ public class Game6Activity extends AppCompatActivity {
     private Button start;
     private Button clickButton;
     private TextView win;
+    private Button hintButton;
     private CountDownTimer countDownTimer;
     private long timeLeft = 10000;
     private boolean timerRunning = false;
@@ -96,3 +98,6 @@ public class Game6Activity extends AppCompatActivity {
         clickButton.setY(setY);
     }
 }
+
+
+

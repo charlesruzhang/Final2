@@ -17,6 +17,8 @@ public class Game5Activity extends AppCompatActivity {
     private int answer;
     private int chance = 7;
     private int inputNumber;
+    /** hint button. **/
+    private Button hintButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,5 +50,15 @@ public class Game5Activity extends AppCompatActivity {
                 compare.setText("invalid input");
             }
         });
+        /** hint button listener - please go to the showHint method at the end and add hint **/
+        hintButton = findViewById(R.id.hintButton);
+        hintButton.setOnClickListener(v -> showHint());
+    }
+
+    /** enter your hint for this level in this method. */
+    private void showHint() {
+        Hint dialog = new Hint();
+        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.show(getSupportFragmentManager(), "Hint");
     }
 }

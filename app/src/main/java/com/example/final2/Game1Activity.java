@@ -25,6 +25,7 @@ import static android.content.ContentValues.TAG;
  *  textView showing the progress of game
  *  Hint button Hint text
  */
+
 public class Game1Activity extends AppCompatActivity {
 
     private static final String TAG = "TEST";
@@ -37,6 +38,8 @@ public class Game1Activity extends AppCompatActivity {
 
     private final double accNumber = 9.3;
 
+    /** hint button. **/
+    private Button hintButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,9 @@ public class Game1Activity extends AppCompatActivity {
         full.setVisibility(View.VISIBLE);
         half.setVisibility(View.GONE);
         empty.setVisibility(View.GONE);
+        /** hint button listener - please go to the showHint method at the end and add hint **/
+        hintButton = findViewById(R.id.hintButton);
+        hintButton.setOnClickListener(v -> showHint());
 
         //useless button
         Button drinkButton = findViewById(R.id.drinkbutton);
@@ -118,5 +124,12 @@ public class Game1Activity extends AppCompatActivity {
         public void onAccuracyChanged(Sensor sensor, int accuracy) {
             Log.i(TAG, "onAccuracyChanged");
         }
+    }
+
+    /** enter your hint for this level in this method. **/
+    private void showHint() {
+        Hint dialog = new Hint();
+        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.show(getSupportFragmentManager(), "Hint");
     }
 }
