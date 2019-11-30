@@ -10,12 +10,12 @@ import android.widget.TextView;
 /** guessing words game.
  * guessing a word between 0 and 99
  * return the input is bigger or smaller than the generated random word
- * 7 chance to guess
+ * 8 chance to guess
  */
 
 public class Game5Activity extends AppCompatActivity {
     private int answer;
-    private int chance = 7;
+    private int chance = 8;
     private int inputNumber;
     /** hint button. **/
     private Button hintButton;
@@ -34,7 +34,7 @@ public class Game5Activity extends AppCompatActivity {
                 if (chance == 0) {
                     compare.setText("You've used up 7 chances...let's make another guess!");
                     answer = (int) (Math.random() * 100);
-                    chance = 7;
+                    chance = 8;
                 } else {
                     if (inputNumber > answer) {
                         compare.setText("I'm thinking about a smaller number...");
@@ -44,6 +44,10 @@ public class Game5Activity extends AppCompatActivity {
                     }
                     if (inputNumber == answer) {
                         compare.setText("This is what I'm thinking about!");
+                        int yourGameLevel = 5;
+                        Pass dialog = new Pass();
+                        dialog.levelPassed(yourGameLevel);
+                        dialog.show(getSupportFragmentManager(), "Pass");
                     }
                 }
             } catch (Exception e) {

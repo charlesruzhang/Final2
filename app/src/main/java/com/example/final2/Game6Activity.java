@@ -80,6 +80,9 @@ public class Game6Activity extends AppCompatActivity {
                 click = 0;
                 win.setText("you pass");
                 win.setVisibility(View.VISIBLE);
+                Pass dialog = new Pass();
+                dialog.levelPassed(6);
+                dialog.show(getSupportFragmentManager(), "Pass");
             } else {
                 click = 0;
                 win.setText("try again");
