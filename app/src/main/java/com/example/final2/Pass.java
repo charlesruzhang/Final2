@@ -24,16 +24,16 @@ public class Pass extends DialogFragment {
         returnButton = view.findViewById(R.id.returnToCatalog);
         continueButton = view.findViewById(R.id.continueButton);
         returnButton.setOnClickListener(v -> {
-            CatalogActivity.unplayedGames.remove(currentLevel);
+            CatalogActivity.passGame(currentLevel);
             getActivity().finish();
         });
         continueButton.setOnClickListener(v -> {
-            CatalogActivity.unplayedGames.remove(currentLevel);
+            CatalogActivity.passGame(currentLevel);
             getActivity().finish();
-            if (CatalogActivity.unplayedGames.size() == 0) {
+            if (CatalogActivity.getSize() == 0) {
                 return;
             } else {
-                int nextLevel = CatalogActivity.unplayedGames.get(0);
+                int nextLevel = CatalogActivity.getLevel(0);
                 if (nextLevel == 1) {
                     Intent intent = new Intent(inflater.getContext(), Game1Activity.class);
                     startActivity(intent);

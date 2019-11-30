@@ -32,7 +32,7 @@ public class Game5Activity extends AppCompatActivity {
                 inputNumber = Integer.valueOf(input.getText().toString());
                 chance--;
                 if (chance == 0) {
-                    compare.setText("You've used up 7 chances...let's make another guess!");
+                    compare.setText("You've used up 8 chances...let's make another guess!");
                     answer = (int) (Math.random() * 100);
                     chance = 8;
                 } else {
