@@ -68,6 +68,7 @@ public class Game6Activity extends AppCompatActivity {
         start.setText("start");
         timerRunning = false;
     }
+
     private void updateTimer() {
         int sec = (int) (timeLeft / 1000);
         String timeLeftText = "" + sec;
@@ -76,6 +77,7 @@ public class Game6Activity extends AppCompatActivity {
             timeLeft = 10000;
             start.setText("start");
             timerRunning = false;
+            // might be click >= 6
             if (click == 6) {
                 click = 0;
                 win.setText("you pass");

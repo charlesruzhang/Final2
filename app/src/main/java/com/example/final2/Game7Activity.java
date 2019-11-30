@@ -6,6 +6,7 @@ import android.app.Service;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -57,8 +58,10 @@ public class Game7Activity extends AppCompatActivity {
         finish.setOnClickListener(unused -> {
             if (checked()) {
                 finishtext.setText("tada you pass");
+                Log.e("TEST", myLinklist.currentSize + "");
             } else {
-                finishtext.setText("incorrect, plz press the reset button");
+                finishtext.setText("Incorrect!!! U know nothing about piano!!!");
+                Log.e("TEST", myLinklist.currentSize + "");
                 myLinklist = new Linklist();
             }
         });

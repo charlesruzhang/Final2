@@ -28,20 +28,23 @@
         <ImageView
             android:id="@+id/full"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_height="400dp"
+            app:srcCompat="@drawable/full"
+            tools:srcCompat="@drawable/full" />
 
         <ImageView
             android:id="@+id/half"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_height="400dp"
+            app:srcCompat="@drawable/half"
+            tools:srcCompat="@drawable/half" />
 
         <ImageView
             android:id="@+id/empty"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_height="400dp"
+            app:srcCompat="@drawable/empty"
+            tools:srcCompat="@drawable/empty" />
 
         <LinearLayout
             android:id="@+id/Unused"
