@@ -24,6 +24,7 @@ import static android.content.ContentValues.TAG;
  *  three pictures: empty and half and full
  *  textView showing the progress of game
  *  Hint button Hint text
+ *  almost finished --- 11/29
  */
 public class Game1Activity extends AppCompatActivity {
 
