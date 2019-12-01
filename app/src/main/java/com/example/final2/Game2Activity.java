@@ -34,6 +34,10 @@ public class Game2Activity extends AppCompatActivity {
     /** The radial location accuracy required to send a location update. */
     private static final float REQUIRED_LOCATION_ACCURACY = 28f;
     private String locationProvider;
+
+    /** hint button. **/
+    private Button hintButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +46,9 @@ public class Game2Activity extends AppCompatActivity {
         TextView latitudeText = findViewById(R.id.LatitudeText);
         TextView longigudeText = findViewById(R.id.LongitudeText);
         locationManager = (LocationManager) getSystemService(getApplicationContext().LOCATION_SERVICE);
+        /** hint button listener - please go to the showHint method at the end and add hint **/
+        hintButton = findViewById(R.id.hintButton);
+        hintButton.setOnClickListener(v -> showHint());
 
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_COARSE);//低精度，如果设置为高精度，依然获取不了location。
@@ -98,4 +105,10 @@ public class Game2Activity extends AppCompatActivity {
         Log.d(TAG,"定位成功------->"+"location------>经度为：" + location.getLatitude() + "\n纬度为" + location.getLongitude());
     }
 
+    /** enter your hint for this level in this method. */
+    private void showHint() {
+        Hint dialog = new Hint();
+        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.show(getSupportFragmentManager(), "Hint");
+    }
 }

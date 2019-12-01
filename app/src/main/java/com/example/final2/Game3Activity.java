@@ -23,11 +23,17 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
 
     private boolean playFlag = false;
 
+    /** hint button. **/
+    private Button hintButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game3);
         Button playButton = findViewById(R.id.playbutton);
+        /** hint button listener - please go to the showHint method at the end and add hint **/
+        hintButton = findViewById(R.id.hintButton);
+        hintButton.setOnClickListener(v -> showHint());
 
         MediaPlayer mp = MediaPlayer.create(this, R.raw.quit);
 
@@ -76,5 +82,12 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
                 loudandlow.setText("Too Low");
             }
         }
+    }
+
+    /** enter your hint for this level in this method. */
+    private void showHint() {
+        Hint dialog = new Hint();
+        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.show(getSupportFragmentManager(), "Hint");
     }
 }

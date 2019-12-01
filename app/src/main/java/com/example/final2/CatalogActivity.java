@@ -9,12 +9,18 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 /**
  * This is the page for all games.
  */
 public class CatalogActivity extends AppCompatActivity {
     //final int countGame = 9;
+    private static List<String> unPlayedGames = new ArrayList<>(
+            Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9"));
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,5 +85,24 @@ public class CatalogActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Game9Activity.class);
             startActivity(intent);
         });
+    }
+
+    public static void resetGameList() {
+        unPlayedGames = new ArrayList<>(
+                Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9"));
+    }
+
+    public static void passGame(int gameLevel) {
+        String index = "" + gameLevel;
+        unPlayedGames.remove(index);
+    }
+
+    public static int getSize() {
+        return unPlayedGames.size();
+    }
+
+    public static int getLevel(int index) {
+        Integer a = Integer.valueOf(unPlayedGames.get(index));
+        return a;
     }
 }

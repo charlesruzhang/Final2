@@ -25,6 +25,9 @@ public class Game7Activity extends AppCompatActivity {
 
     private Linklist myLinklist = new Linklist();
 
+    /** hint button. **/
+    private Button hintButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,10 @@ public class Game7Activity extends AppCompatActivity {
         myVibrator = (Vibrator) getSystemService(Service.VIBRATOR_SERVICE);
 
         TextView finishtext = findViewById(R.id.testtext);
+
+        /** hint button listener - please go to the showHint method at the end and add hint **/
+        hintButton = findViewById(R.id.hintButton);
+        hintButton.setOnClickListener(v -> showHint());
 
         //restart the music
         Button resetmusic = findViewById(R.id.resetMusic);
@@ -178,5 +185,12 @@ public class Game7Activity extends AppCompatActivity {
             }
         }
         return true;
+    }
+
+    /** enter your hint for this level in this method. **/
+    private void showHint() {
+        Hint dialog = new Hint();
+        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.show(getSupportFragmentManager(), "Hint");
     }
 }

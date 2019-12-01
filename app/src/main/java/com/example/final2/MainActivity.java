@@ -7,6 +7,9 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * This is the first page of the game.
  */
@@ -17,15 +20,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button startGame = findViewById(R.id.startGame);
-        startGame.setText("Enter Game");
-        startGame.setOnClickListener(unused -> getToGamePage());
-
+        startGame.setOnClickListener(unused -> getToNewGamePage());
+        Button continueGame = findViewById(R.id.continueGame);
+        continueGame.setOnClickListener(unused -> getToGamePage());
 
     }
+    private void getToNewGamePage() {
+        CatalogActivity.resetGameList();
+        Intent intent = new Intent(this, CatalogActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     private void getToGamePage() {
         Intent intent = new Intent(this, CatalogActivity.class);
         startActivity(intent);
         finish();
     }
-    // CS 125 hahha
 }

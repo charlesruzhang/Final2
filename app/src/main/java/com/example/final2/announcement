@@ -1,0 +1,28 @@
+important announcement here...
+(with date and name
+
+
+11.29 aileen
+
+-hint is added for every game, please add your hints:
+
+    for finished game:
+        -please add your hint as String in the showHint() method towards the end of each GameXActivity class
+         (reference: Game6Activity
+        -please check your UI to make sure that the hint button is added properly
+
+    for unfinished game (game 4, 8, 9):
+        -program and UI for hint button have been added
+        -you may find
+         android:layout_below="@id/hintButton"
+         helpful in designing UI
+         (reference: activity_game1
+
+-change the root element to RelativeLayout
+
+-pass game dialog is added, please copy the code below in each game:
+    int yourGameLevel = ;
+    Pass dialog = new Pass();
+    dialog.levelPassed(yourGameLevel);
+    dialog.show(getSupportFragmentManager(), "Pass");
+    (reference: Game6Activity
