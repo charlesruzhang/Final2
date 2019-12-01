@@ -55,6 +55,7 @@ public class Game1Activity extends AppCompatActivity {
         full.setVisibility(View.VISIBLE);
         half.setVisibility(View.GONE);
         empty.setVisibility(View.GONE);
+
         /** hint button listener - please go to the showHint method at the end and add hint **/
         hintButton = findViewById(R.id.hintButton);
         hintButton.setOnClickListener(v -> showHint());
@@ -130,7 +131,7 @@ public class Game1Activity extends AppCompatActivity {
     /** enter your hint for this level in this method. **/
     private void showHint() {
         Hint dialog = new Hint();
-        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.addHint("Try to reverse the screen");
         dialog.show(getSupportFragmentManager(), "Hint");
     }
 }

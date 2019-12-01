@@ -87,7 +87,7 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
     /** enter your hint for this level in this method. */
     private void showHint() {
         Hint dialog = new Hint();
-        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.addHint("Maybe turn on the music ?");
         dialog.show(getSupportFragmentManager(), "Hint");
     }
 }

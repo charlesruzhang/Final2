@@ -190,7 +190,7 @@ public class Game7Activity extends AppCompatActivity {
     /** enter your hint for this level in this method. **/
     private void showHint() {
         Hint dialog = new Hint();
-        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.addHint("Listening to the BGM");
         dialog.show(getSupportFragmentManager(), "Hint");
     }
 }
