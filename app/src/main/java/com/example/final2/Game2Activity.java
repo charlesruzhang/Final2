@@ -34,7 +34,7 @@ public class Game2Activity extends AppCompatActivity {
     /** The radial location accuracy required to send a location update. */
     private static final float REQUIRED_LOCATION_ACCURACY = 28f;
     private String locationProvider;
-
+    private final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 2;
     /** hint button. **/
     private Button hintButton;
 
@@ -43,13 +43,13 @@ public class Game2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game2);
         System.out.println("HEL1");
+
         TextView latitudeText = findViewById(R.id.LatitudeText);
         TextView longigudeText = findViewById(R.id.LongitudeText);
         locationManager = (LocationManager) getSystemService(getApplicationContext().LOCATION_SERVICE);
         /** hint button listener - please go to the showHint method at the end and add hint **/
         hintButton = findViewById(R.id.hintButton);
         hintButton.setOnClickListener(v -> showHint());
-
         Criteria criteria = new Criteria();
         criteria.setAccuracy(Criteria.ACCURACY_COARSE);//低精度，如果设置为高精度，依然获取不了location。
         criteria.setAltitudeRequired(false);//不要求海拔
@@ -63,7 +63,9 @@ public class Game2Activity extends AppCompatActivity {
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getApplicationContext(),
                 Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             Log.d(TAG, "onCreate: 没有权限 ");
-            return;
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    MY_PERMISSIONS_REQUEST_READ_CONTACTS);
         }
         Location location = locationManager.getLastKnownLocation(locationProvider);
         Log.d(TAG, "onCreate: " + (location == null) + "..");
@@ -74,6 +76,7 @@ public class Game2Activity extends AppCompatActivity {
         }
         //监视地理位置变化
         locationManager.requestLocationUpdates(locationProvider, 0, 0, locationListener);
+
     }
 
     LocationListener locationListener = new LocationListener() {
@@ -103,6 +106,10 @@ public class Game2Activity extends AppCompatActivity {
 
     private void showLocation(Location location) {
         Log.d(TAG,"定位成功------->"+"location------>经度为：" + location.getLatitude() + "\n纬度为" + location.getLongitude());
+        TextView latitudeText = findViewById(R.id.LatitudeText);
+        TextView longigudeText = findViewById(R.id.LongitudeText);
+        latitudeText.setText(location.getLatitude() + "@@");
+        longigudeText.setText(location.getLongitude() + "##");
     }
 
     /** enter your hint for this level in this method. */
@@ -110,5 +117,27 @@ public class Game2Activity extends AppCompatActivity {
         Hint dialog = new Hint();
         dialog.addHint("enter hint here. (e.g. Game6Activity");
         dialog.show(getSupportFragmentManager(), "Hint");
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_READ_CONTACTS: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+                } else {
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request.
+        }
     }
 }
