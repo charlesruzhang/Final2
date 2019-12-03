@@ -6,97 +6,138 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/GameList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/game1"
+            android:layout_width="88dp"
+            android:layout_height="111dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="49dp"
+            android:src="@drawable/c1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/c1"
+            tools:srcCompat="@tools:sample/avatars" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+        <ImageButton
+            android:id="@+id/game2"
+            android:layout_width="107dp"
+            android:layout_height="103dp"
+            android:layout_marginStart="137dp"
+            android:layout_marginLeft="137dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginEnd="167dp"
+            android:layout_marginRight="167dp"
+            android:layout_marginBottom="571dp"
+            android:src="@drawable/c2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/c2"
+            tools:srcCompat="@tools:sample/avatars" />
 
-                <ImageButton
-                    android:id="@+id/game1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:src="@drawable/lorewalker"
-                    tools:src="@drawable/lorewalker"
-                    tools:srcCompat="@tools:sample/avatars" />
+        <ImageButton
+            android:id="@+id/game3"
+            android:layout_width="100dp"
+            android:layout_height="117dp"
+            android:layout_marginStart="267dp"
+            android:layout_marginLeft="267dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp"
+            android:layout_marginBottom="571dp"
+            android:src="@drawable/c3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/c3"
+            tools:srcCompat="@tools:sample/avatars" />
 
-                <ImageButton
-                    android:id="@+id/game2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars" />
+        <ImageButton
+            android:id="@+id/game4"
+            android:layout_width="117dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="196dp"
+            android:src="@drawable/c4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/c4"
+            tools:srcCompat="@tools:sample/avatars" />
 
-                <ImageButton
-                    android:id="@+id/game3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars" />
-            </TableRow>
+        <ImageButton
+            android:id="@+id/game5"
+            android:layout_width="116dp"
+            android:layout_height="103dp"
+            android:layout_marginStart="137dp"
+            android:layout_marginLeft="137dp"
+            android:layout_marginTop="196dp"
+            android:src="@drawable/c5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/c5"
+            tools:srcCompat="@tools:sample/avatars" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+        <ImageButton
+            android:id="@+id/game6"
+            android:layout_width="101dp"
+            android:layout_height="117dp"
+            android:layout_marginStart="267dp"
+            android:layout_marginLeft="267dp"
+            android:layout_marginTop="186dp"
+            android:src="@drawable/c6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/c6"
+            tools:srcCompat="@tools:sample/avatars" />
 
-                <ImageButton
-                    android:id="@+id/game4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars" />
+        <ImageButton
+            android:id="@+id/game7"
+            android:layout_width="108dp"
+            android:layout_height="113dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="335dp"
+            android:src="@drawable/c7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/c7"
+            tools:srcCompat="@tools:sample/avatars" />
 
-                <ImageButton
-                    android:id="@+id/game5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars" />
+        <ImageButton
+            android:id="@+id/game8"
+            android:layout_width="111dp"
+            android:layout_height="116dp"
+            android:layout_marginStart="137dp"
+            android:layout_marginLeft="137dp"
+            android:layout_marginTop="335dp"
+            android:src="@drawable/c8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/c8"
+            tools:srcCompat="@tools:sample/avatars" />
 
-                <ImageButton
-                    android:id="@+id/game6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars" />
-            </TableRow>
+        <ImageButton
+            android:id="@+id/game9"
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginStart="268dp"
+            android:layout_marginLeft="268dp"
+            android:layout_marginTop="335dp"
+            android:src="@drawable/c9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/c9"
+            tools:srcCompat="@tools:sample/avatars" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <ImageButton
-                    android:id="@+id/game7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars" />
-
-                <ImageButton
-                    android:id="@+id/game8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars" />
-
-                <ImageButton
-                    android:id="@+id/game9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    tools:srcCompat="@tools:sample/avatars" />
-            </TableRow>
-
-        </TableLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

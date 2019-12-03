@@ -19,7 +19,6 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import org.w3c.dom.Text;
 
 import java.util.List;
@@ -37,7 +36,9 @@ public class Game2Activity extends AppCompatActivity {
     private final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 2;
     /** hint button. **/
     private Button hintButton;
-
+    private final double PROXIMITY = 0.0002;
+    private final double targetLatitude = -88.227009;
+    private final double targetLongitude = 40.10483;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,10 +109,18 @@ public class Game2Activity extends AppCompatActivity {
         Log.d(TAG,"定位成功------->"+"location------>经度为：" + location.getLatitude() + "\n纬度为" + location.getLongitude());
         TextView latitudeText = findViewById(R.id.LatitudeText);
         TextView longigudeText = findViewById(R.id.LongitudeText);
-        latitudeText.setText(location.getLatitude() + "@@");
-        longigudeText.setText(location.getLongitude() + "##");
+        boolean bol = checkLocation(location);
+        latitudeText.setText(location.getLatitude() + "" + bol);
+        longigudeText.setText(location.getLongitude() + "" + bol);
     }
 
+    private boolean checkLocation(Location location) {
+        if (location.getLongitude() - targetLongitude < PROXIMITY && location.getLatitude() - targetLatitude < PROXIMITY) {
+            Log.d(TAG, "YEah");
+            return true;
+        }
+        return false;
+    }
     /** enter your hint for this level in this method. */
     private void showHint() {
         Hint dialog = new Hint();

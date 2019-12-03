@@ -97,7 +97,7 @@ public class Game1Activity extends AppCompatActivity {
         @Override
         public void onSensorChanged(SensorEvent event) {
 
-            // (0, 1, 2) -> (x , y ,z) event.value[i]
+            // (0, c1, c2) -> (x , y ,z) event.value[i]
             Log.i(TAG, "SensorChangedValue: " + event.values[0] + ", " + event.values[1] + ", " + event.values[2]);
 
             TextView sensorInfotext = findViewById(R.id.infotext);
