@@ -61,7 +61,7 @@ public class Game6Activity extends AppCompatActivity {
 
             }
         }.start();
-        start.setText("stop");
+        start.setText("Pause");
         timerRunning = true;
     }
 
@@ -69,6 +69,7 @@ public class Game6Activity extends AppCompatActivity {
         countDownTimer.cancel();
         start.setText("start");
         timerRunning = false;
+        clickButton.setVisibility(View.INVISIBLE);
     }
 
     private void updateTimer() {

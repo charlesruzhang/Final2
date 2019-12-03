@@ -38,5 +38,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="572dp"
+            app:srcCompat="@android:color/holo_green_dark" />
     </LinearLayout>
 </RelativeLayout>
