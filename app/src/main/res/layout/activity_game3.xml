@@ -21,7 +21,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="571dp"
+            android:layout_height="441dp"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <LinearLayout

@@ -26,3 +26,8 @@ important announcement here...
     dialog.levelPassed(yourGameLevel);
     dialog.show(getSupportFragmentManager(), "Pass");
     (reference: Game6Activity
+
+
+12.3 Jimmy
+1.
+1. Button UI for Activity 6

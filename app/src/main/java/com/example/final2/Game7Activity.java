@@ -50,6 +50,7 @@ public class Game7Activity extends AppCompatActivity {
         //reset the linkedlist
         Button reset = findViewById(R.id.resetButtons);
         reset.setOnClickListener(unused -> {
+            mp.stop();
             myLinklist = new Linklist();
         });
 
