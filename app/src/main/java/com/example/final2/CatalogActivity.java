@@ -21,6 +21,7 @@ public class CatalogActivity extends AppCompatActivity {
     //final int countGame = 9;
     private static List<String> unPlayedGames = new ArrayList<>(
             Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9"));
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

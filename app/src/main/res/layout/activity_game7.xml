@@ -23,7 +23,7 @@
             android:id="@+id/testtext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:text="Maybe press the Playing Button" />
 
         <Button
             android:id="@+id/d"

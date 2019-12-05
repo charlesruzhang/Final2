@@ -16,12 +16,12 @@
 
     <Button
         android:id="@+id/clickButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="121dp"
+        android:layout_height="78dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="100dp"
-        android:text="click"
         android:stateListAnimator="@null"
+        android:text="click"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
