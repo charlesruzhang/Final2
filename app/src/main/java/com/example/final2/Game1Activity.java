@@ -109,6 +109,7 @@ public class Game1Activity extends AppCompatActivity {
                 Pass dialog = new Pass();
                 dialog.levelPassed(1);
                 dialog.show(getSupportFragmentManager(), "Pass");
+                onPause();
             }
 
 
