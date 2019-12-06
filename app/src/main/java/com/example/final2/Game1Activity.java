@@ -37,7 +37,7 @@ public class Game1Activity extends AppCompatActivity {
 
     private TestSensorListener mySensorListener;
 
-    private final double accNumber = 9.3;
+    private final double accNumber = 9.5;
 
     /** hint button. **/
     private Button hintButton;
@@ -105,15 +105,18 @@ public class Game1Activity extends AppCompatActivity {
             ImageView half = findViewById(R.id.half);
             ImageView empty = findViewById(R.id.empty);
 
-
-            if (half.getVisibility() == View.VISIBLE && event.values[1] < (-1 * accNumber)
-                    && sensorInfotext.getText().toString().equals("Drink it again")) {
-                sensorInfotext.setText("tada finish");
-                half.setVisibility(View.GONE);
-                empty.setVisibility(View.VISIBLE);
+            if (sensorInfotext.getText().toString().equals("tada finished") && event.values[1] > accNumber) {
                 Pass dialog = new Pass();
                 dialog.levelPassed(1);
                 dialog.show(getSupportFragmentManager(), "Pass");
+            }
+
+
+            if (half.getVisibility() == View.VISIBLE && event.values[1] < (-1 * accNumber)
+                    && sensorInfotext.getText().toString().equals("Drink it again")) {
+                sensorInfotext.setText("tada finished");
+                half.setVisibility(View.GONE);
+                empty.setVisibility(View.VISIBLE);
             }
 
             if (half.getVisibility() == View.VISIBLE && event.values[1] > accNumber) {

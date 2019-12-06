@@ -84,7 +84,7 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
         }
         if (loudandlow.getText().toString().equals("Too Low")) {
             Pass dialog = new Pass();
-            dialog.levelPassed(2);
+            dialog.levelPassed(3);
             dialog.show(getSupportFragmentManager(), "Pass");
         }
     }
