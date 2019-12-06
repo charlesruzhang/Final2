@@ -17,26 +17,23 @@
 
             <ImageButton
                 android:id="@+id/game1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/c1"
-                tools:src="@drawable/c1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 tools:srcCompat="@drawable/c1" />
 
             <ImageButton
                 android:id="@+id/game2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/c2"
-                tools:src="@drawable/c2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 tools:srcCompat="@drawable/c2" />
 
             <ImageButton
                 android:id="@+id/game3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/c3"
-                tools:src="@drawable/c3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 tools:srcCompat="@drawable/c3" />
         </TableRow>
 
@@ -46,20 +43,23 @@
 
             <ImageButton
                 android:id="@+id/game4"
-                android:src="@drawable/c4"
-                tools:src="@drawable/c4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 tools:srcCompat="@drawable/c4" />
 
             <ImageButton
                 android:id="@+id/game5"
-                android:src="@drawable/c5"
-                tools:src="@drawable/c5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 tools:srcCompat="@drawable/c5" />
 
             <ImageButton
                 android:id="@+id/game6"
-                android:src="@drawable/c6"
-                tools:src="@drawable/c6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 tools:srcCompat="@drawable/c6" />
         </TableRow>
 
@@ -69,20 +69,25 @@
 
             <ImageButton
                 android:id="@+id/game7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:src="@drawable/c7"
                 tools:src="@drawable/c7"
                 tools:srcCompat="@drawable/c7" />
 
             <ImageButton
                 android:id="@+id/game8"
-                android:src="@drawable/c8"
-                tools:src="@drawable/c8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 tools:srcCompat="@drawable/c8" />
 
             <ImageButton
                 android:id="@+id/game9"
-                android:src="@drawable/c9"
-                tools:src="@drawable/c9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 tools:srcCompat="@drawable/c9" />
         </TableRow>
 
