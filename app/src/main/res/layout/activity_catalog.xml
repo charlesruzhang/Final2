@@ -22,6 +22,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
+                android:src="@drawable/c1"
+                tools:src="@drawable/c1"
                 tools:srcCompat="@drawable/c1" />
 
             <ImageButton
@@ -31,6 +33,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
+                android:src="@drawable/c2"
+                tools:src="@drawable/c2"
                 tools:srcCompat="@drawable/c2" />
 
             <ImageButton
@@ -40,6 +44,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
+                android:src="@drawable/c3"
+                tools:src="@drawable/c3"
                 tools:srcCompat="@drawable/c3" />
         </TableRow>
 
@@ -54,6 +60,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
+                android:src="@drawable/c4"
+                tools:src="@drawable/c4"
                 tools:srcCompat="@drawable/c4" />
 
             <ImageButton
@@ -63,6 +71,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
+                android:src="@drawable/c5"
+                tools:src="@drawable/c5"
                 tools:srcCompat="@drawable/c5" />
 
             <ImageButton
@@ -72,6 +82,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
+                android:src="@drawable/c6"
+                tools:src="@drawable/c6"
                 tools:srcCompat="@drawable/c6" />
         </TableRow>
 
@@ -86,6 +98,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
+                android:src="@drawable/c7"
+                tools:src="@drawable/c7"
                 tools:srcCompat="@drawable/c7" />
 
             <ImageButton
@@ -95,6 +109,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
+                android:src="@drawable/c8"
+                tools:src="@drawable/c8"
                 tools:srcCompat="@drawable/c8" />
 
             <ImageButton
@@ -104,6 +120,8 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside"
+                android:src="@drawable/c9"
+                tools:src="@drawable/c9"
                 tools:srcCompat="@drawable/c9" />
         </TableRow>
 
