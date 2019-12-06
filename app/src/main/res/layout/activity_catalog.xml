@@ -8,8 +8,8 @@
     tools:context=".Game6Activity">
 
     <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -20,6 +20,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
                 tools:srcCompat="@drawable/c1" />
 
             <ImageButton
@@ -27,6 +29,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
                 tools:srcCompat="@drawable/c2" />
 
             <ImageButton
@@ -34,6 +38,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
                 tools:srcCompat="@drawable/c3" />
         </TableRow>
 
@@ -46,6 +52,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
                 tools:srcCompat="@drawable/c4" />
 
             <ImageButton
@@ -53,6 +61,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
                 tools:srcCompat="@drawable/c5" />
 
             <ImageButton
@@ -60,6 +70,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
                 tools:srcCompat="@drawable/c6" />
         </TableRow>
 
@@ -72,8 +84,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/c7"
-                tools:src="@drawable/c7"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
                 tools:srcCompat="@drawable/c7" />
 
             <ImageButton
@@ -81,6 +93,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
                 tools:srcCompat="@drawable/c8" />
 
             <ImageButton
@@ -88,6 +102,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
                 tools:srcCompat="@drawable/c9" />
         </TableRow>
 
