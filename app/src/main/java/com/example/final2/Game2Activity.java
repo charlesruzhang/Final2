@@ -118,7 +118,7 @@ public class Game2Activity extends AppCompatActivity {
         if (location.getLongitude() - targetLongitude < PROXIMITY && location.getLatitude() - targetLatitude < PROXIMITY) {
             Log.d(TAG, "YEah");
             Pass dialog = new Pass();
-            dialog.levelPassed(1);
+            dialog.levelPassed(2);
             dialog.show(getSupportFragmentManager(), "Pass");
             onPause();
             return true;
