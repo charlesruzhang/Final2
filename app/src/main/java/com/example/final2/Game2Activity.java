@@ -37,8 +37,8 @@ public class Game2Activity extends AppCompatActivity {
     /** hint button. **/
     private Button hintButton;
     private final double PROXIMITY = 0.0002;
-    private final double targetLatitude = -88.227009;
-    private final double targetLongitude = 40.10483;
+    private final double targetLatitude = 40.10483;
+    private final double targetLongitude = -88.227009;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,8 +115,13 @@ public class Game2Activity extends AppCompatActivity {
     }
 
     private boolean checkLocation(Location location) {
-        if (location.getLongitude() - targetLongitude < PROXIMITY && location.getLatitude() - targetLatitude < PROXIMITY) {
+        Log.e("Difference", (location.getLongitude() - targetLongitude) + "");
+        if (Math.abs(location.getLongitude() - targetLongitude) < PROXIMITY && Math.abs(location.getLatitude() - targetLatitude) < PROXIMITY) {
             Log.d(TAG, "YEah");
+            Pass dialog = new Pass();
+            dialog.levelPassed(2);
+            dialog.show(getSupportFragmentManager(), "Pass");
+            onPause();
             return true;
         }
         return false;
@@ -124,7 +129,7 @@ public class Game2Activity extends AppCompatActivity {
     /** enter your hint for this level in this method. */
     private void showHint() {
         Hint dialog = new Hint();
-        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.addHint("Where's Geoff?");
         dialog.show(getSupportFragmentManager(), "Hint");
     }
     @Override

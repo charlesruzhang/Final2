@@ -37,7 +37,7 @@ public class Game1Activity extends AppCompatActivity {
 
     private TestSensorListener mySensorListener;
 
-    private final double accNumber = 9.5;
+    private final double accNumber = 9.3;
 
     /** hint button. **/
     private Button hintButton;
