@@ -60,6 +60,9 @@ public class Game7Activity extends AppCompatActivity {
             if (checked()) {
                 finishtext.setText("tada you pass");
                 Log.e("TEST", myLinklist.currentSize + "");
+                Pass dialog = new Pass();
+                dialog.levelPassed(7);
+                dialog.show(getSupportFragmentManager(), "Pass");
             } else {
                 finishtext.setText("Incorrect!!! U know nothing about piano!!!");
                 Log.e("TEST", myLinklist.currentSize + "");

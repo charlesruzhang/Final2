@@ -111,6 +111,9 @@ public class Game1Activity extends AppCompatActivity {
                 sensorInfotext.setText("tada finish");
                 half.setVisibility(View.GONE);
                 empty.setVisibility(View.VISIBLE);
+                Pass dialog = new Pass();
+                dialog.levelPassed(1);
+                dialog.show(getSupportFragmentManager(), "Pass");
             }
 
             if (half.getVisibility() == View.VISIBLE && event.values[1] > accNumber) {
