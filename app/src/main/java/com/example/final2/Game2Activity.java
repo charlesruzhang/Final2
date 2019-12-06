@@ -117,6 +117,10 @@ public class Game2Activity extends AppCompatActivity {
     private boolean checkLocation(Location location) {
         if (location.getLongitude() - targetLongitude < PROXIMITY && location.getLatitude() - targetLatitude < PROXIMITY) {
             Log.d(TAG, "YEah");
+            Pass dialog = new Pass();
+            dialog.levelPassed(1);
+            dialog.show(getSupportFragmentManager(), "Pass");
+            onPause();
             return true;
         }
         return false;
@@ -124,7 +128,7 @@ public class Game2Activity extends AppCompatActivity {
     /** enter your hint for this level in this method. */
     private void showHint() {
         Hint dialog = new Hint();
-        dialog.addHint("enter hint here. (e.g. Game6Activity");
+        dialog.addHint("Where's Geoff?");
         dialog.show(getSupportFragmentManager(), "Hint");
     }
     @Override
