@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Game9Activity"
@@ -13,5 +14,39 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:text="hint" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/myluxvavlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+
+            <TextView
+                android:id="@+id/currentp"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:text="0%" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
