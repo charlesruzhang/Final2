@@ -46,6 +46,11 @@ public class Game9Activity extends AppCompatActivity {
         }
         super.onDestroy();
     }
+    protected void onPause() {
+        super.onPause();
+        mySensorManager.unregisterListener(listener);
+    }
+
     private SensorEventListener listener = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent sensorEvent) {
