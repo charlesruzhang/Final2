@@ -33,7 +33,6 @@ public class Game6Activity extends AppCompatActivity {
         start.setOnClickListener(v -> startStop());
         clickButton = findViewById(R.id.clickButton);
         clickButton.setOnClickListener(v -> clickCounting());
-        clickButton.setVisibility(View.INVISIBLE);
         win = findViewById(R.id.winSignal);
         hintButton = findViewById(R.id.hintButton);
         hintButton.setOnClickListener(v -> showHint());
@@ -51,17 +50,45 @@ public class Game6Activity extends AppCompatActivity {
         countDownTimer =  new CountDownTimer(timeLeft, 1000) {
             @Override
             public void onTick(long l) {
-                clickButton.setVisibility(View.VISIBLE);
                 timeLeft = l;
                 updateTimer();
             }
 
             @Override
             public void onFinish() {
-
+                timeLeft = 10000;
+                timer.setText("10");
+                start.setText("start");
+                timerRunning = false;
+                if (click == 6) {
+                    click = 0;
+                    win.setText("you pass");
+                    win.setVisibility(View.VISIBLE);
+                    Pass dialog = new Pass();
+                    dialog.levelPassed(6);
+                    dialog.show(getSupportFragmentManager(), "Pass");
+                } else {
+                    click = 0;
+                    win.setText("try again");
+                    win.setVisibility(View.VISIBLE);
+                }
+                start.setText("start");
+                timerRunning = false;
+                if (click == 6) {
+                    click = 0;
+                    win.setText("you pass");
+                    win.setVisibility(View.VISIBLE);
+                    Pass dialog = new Pass();
+                    dialog.levelPassed(6);
+                    dialog.show(getSupportFragmentManager(), "Pass");
+                } else {
+                    click = 0;
+                    win.setText("try again");
+                    win.setVisibility(View.VISIBLE);
+                }
             }
         }.start();
-        start.setText("Pause");
+        start.setText("stop");
         timerRunning = true;
     }
 
@@ -69,36 +96,11 @@ public class Game6Activity extends AppCompatActivity {
         countDownTimer.cancel();
         start.setText("start");
         timerRunning = false;
-        clickButton.setVisibility(View.INVISIBLE);
     }
-
     private void updateTimer() {
         int sec = (int) (timeLeft / 1000);
         String timeLeftText = "" + sec;
         timer.setText(timeLeftText);
-        if (sec == 0) {
-            timeLeft = 10000;
-            start.setText("start");
-            timerRunning = false;
-            // might be click >= 6
-            if (click == 6) {
-                click = 0;
-                win.setText("you pass");
-                win.setVisibility(View.VISIBLE);
-                Pass dialog = new Pass();
-                dialog.levelPassed(6);
-                dialog.show(getSupportFragmentManager(), "Pass");
-            } else {
-                win.setVisibility(View.VISIBLE);
-                if (click > 6) {
-                    win.setText("It's more than expected");
-                } else {
-                    win.setText("It's less than expected");
-                }
-                click = 0;
-                clickButton.setVisibility(View.INVISIBLE);
-            }
-        }
     }
 
     private void clickCounting() {
@@ -119,6 +121,3 @@ public class Game6Activity extends AppCompatActivity {
         dialog.show(getSupportFragmentManager(), "Hint");
     }
 }
-
-
-

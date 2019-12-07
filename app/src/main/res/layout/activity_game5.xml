@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Game5Activity">
+    tools:context=".Game5Activity"
+    android:background="@color/backGround">
 
     <Button
         android:id="@+id/hintButton"
@@ -39,10 +40,5 @@
             android:layout_height="wrap_content"
             android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="572dp"
-            app:srcCompat="@android:color/holo_green_dark" />
     </LinearLayout>
 </RelativeLayout>

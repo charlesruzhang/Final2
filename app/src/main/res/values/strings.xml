@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Final2</string>
-    <color name="backGround">#f3e6b6</color>
+    <string name="app_name">Mystic 125</string>
+    <color name="backGround">#F3E5B6</color>
+    <color name="designBlue">#aabcff</color>
+    <color name="designRed">#Ffaae6</color>
+    <color name="designGreen">#aaffc2</color>
 </resources>

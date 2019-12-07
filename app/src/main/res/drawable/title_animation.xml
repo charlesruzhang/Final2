@@ -1,0 +1,16 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/title1"
+        android:duration="400"/>
+
+    <item
+        android:drawable="@drawable/title2"
+        android:duration="400"/>
+
+    <item
+        android:drawable="@drawable/title3"
+        android:duration="400"/>
+
+</animation-list>

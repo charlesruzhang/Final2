@@ -96,6 +96,7 @@ public class CatalogActivity extends AppCompatActivity {
     public static void passGame(int gameLevel) {
         String index = "" + gameLevel;
         unPlayedGames.remove(index);
+
     }
 
     public static int getSize() {
