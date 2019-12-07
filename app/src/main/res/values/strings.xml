@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Final2</string>
+    <color name="backGround">#f3e6b6</color>
 </resources>

@@ -4,23 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backGround"
     tools:context=".MainActivity">
 
 
-    <Button
+    <ImageButton
         android:id="@+id/startGame"
-        android:layout_width="128dp"
-        android:layout_height="64dp"
-        android:text="new game"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@null"
+        android:src="@drawable/startbutton"
+        tools:src="@drawable/startbutton"
+        tools:srcCompat="@drawable/startbutton" />
 
     <Button
         android:id="@+id/continueGame"
         android:layout_width="128dp"
         android:layout_height="64dp"
-        android:text="continue"
         android:layout_below="@id/startGame"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:text="continue"
+        android:visibility="gone" />
 
 </RelativeLayout>
