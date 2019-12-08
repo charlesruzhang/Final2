@@ -3,10 +3,10 @@
 
     <item
         android:drawable="@drawable/batteryempty"
-        android:duration="400"/>
+        android:duration="800"/>
 
     <item
         android:drawable="@drawable/battery25"
-        android:duration="400"/>
+        android:duration="800"/>
 
 </animation-list>

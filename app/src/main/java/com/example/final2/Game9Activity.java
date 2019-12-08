@@ -109,7 +109,7 @@ public class Game9Activity extends AppCompatActivity {
                 text.setText("Value is: " + myLux);
                 currentpercent.setText(i + "%");
                 progressBar.setProgress(i);
-                if (myLux > 100) {
+                if (myLux > 600) {
                     i = i + 1;
                 }
             }
