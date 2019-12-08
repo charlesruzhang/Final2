@@ -3,50 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <RadioGroup
         android:id="@+id/Tablechunk"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/bt1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/bt2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/bt3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/bt4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/bt5"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/bt6"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="Button" />
-    </LinearLayout>
-
+        android:layout_height="match_parent" />
 </LinearLayout>
