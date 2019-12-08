@@ -7,11 +7,6 @@
     tools:context=".Game4Activity"
     android:background="@color/backGround">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
-
     <Button
         android:id="@+id/hintButton"
         android:layout_width="wrap_content"
@@ -23,9 +18,10 @@
         android:id="@+id/Table"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignTop="@+id/hintButton"
         android:layout_marginTop="50dp"
-        android:orientation="vertical" />
+        android:orientation="vertical" >
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/startButton4"
@@ -38,5 +34,11 @@
         android:layout_marginLeft="130dp"
         android:layout_marginTop="500dp"
         android:text="Button" />
+
+    <TextView
+        android:id="@+id/presentNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 
 </RelativeLayout>
