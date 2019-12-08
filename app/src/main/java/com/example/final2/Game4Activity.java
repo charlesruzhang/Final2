@@ -42,21 +42,26 @@ public class Game4Activity extends AppCompatActivity {
     private void start() {
         findViewById(R.id.startButton4).setVisibility(View.INVISIBLE);
         TextView present = findViewById(R.id.presentNumber);
+        present.setVisibility(View.VISIBLE);
         present.setText(presentNumber + "");
         LinearLayout table = findViewById(R.id.Table);
         int[][] generator = generate(line);
         for (int i = 0; i < line; i++) {
             Log.e("new", "this is " + i);
-            View rowChunk = getLayoutInflater().inflate(R.layout.chunk_game4, table, false);
-            RadioGroup tableChunk = rowChunk.findViewById(R.id.Tablechunk);
+            //View rowChunk = getLayoutInflater().inflate(R.layout.chunk_game4, table, false);
+            //RadioGroup tableChunk = rowChunk.findViewById(R.id.Tablechunk);
+            LinearLayout tableChunk = new LinearLayout(this);
+
             for (int j = 0; j < line; j++) {
                 Button newButton = new Button(this);
                 newButton.setText(generator[i][j] + "");
                 newButton.setId(i * 100 + j);
+                newButton.setWidth(60);
+                newButton.setHeight(60);
                 newButton.setOnClickListener(unused -> check(newButton.getText().toString()));
                 tableChunk.addView(newButton);
             }
-            table.addView(rowChunk);
+            table.addView(tableChunk);
             /*Button bt1 = rowChunk.findViewById(R.id.bt1);
             Button bt2 = rowChunk.findViewById(R.id.bt2);
             Button bt3 = rowChunk.findViewById(R.id.bt3);
@@ -102,12 +107,14 @@ public class Game4Activity extends AppCompatActivity {
 
     private void check(String text) {
         int number = Integer.parseInt(text);
-        if (number == presentNumber) {
+        Log.e("jjj", number + "");
+        if (number == presentNumber + 1) {
             presentNumber++;
             TextView present = findViewById(R.id.presentNumber);
+            present.setVisibility(View.VISIBLE);
             present.setText(presentNumber + "");
         }
-        if (presentNumber == line * line + 1) {
+        if (presentNumber == line * line) {
             onPause();
             Pass dialog = new Pass();
             dialog.levelPassed(4);
