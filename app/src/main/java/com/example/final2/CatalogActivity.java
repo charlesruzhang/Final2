@@ -28,7 +28,7 @@ public class CatalogActivity extends AppCompatActivity {
         setContentView(R.layout.activity_catalog);
         /*LinearLayout gameList = findViewById(R.id.GameList);
         for (int i = 0; i < countGame; i++) {
-            View GameChunk = getLayoutInflater().inflate(R.layout.chunk_game, gameList, false);
+            View GameChunk = getLayoutInflater().inflate(R.layout.chunk_game4, gameList, false);
             ImageButton gameButton = GameChunk.findViewById(R.id.gameButton);
             int index = i;
             gameButton.setOnClickListener(unused -> enterGame(index));
