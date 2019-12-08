@@ -106,10 +106,10 @@ public class Game1Activity extends AppCompatActivity {
             ImageView empty = findViewById(R.id.empty);
 
             if (sensorInfotext.getText().toString().equals("Finished") && event.values[1] > accNumber) {
+                onPause();
                 Pass dialog = new Pass();
                 dialog.levelPassed(1);
                 dialog.show(getSupportFragmentManager(), "Pass");
-                onPause();
             }
 
 

@@ -25,6 +25,7 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
 
     /** hint button. **/
     private Button hintButton;
+    private Button stop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,14 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
             mp.start();
             playFlag = true;
         });
+
+        stop = findViewById(R.id.stop);
+        stop.setText("Stop");
+
+        stop.setOnClickListener(unused -> {
+            mp.stop();
+        });
+
 
 
         myObserver = new VolumeChangeObserver(this);
@@ -70,6 +79,18 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
         myObserver.registerReceiver();
         super.onResume();
     }
+    private void releaseMediaPlayer() {
+        try {
+            if (mp != null) {
+                if (mp.isPlaying())
+                    mp.stop();
+                mp.release();
+                mp = null;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public void VolumeChanged(int volume) {
         TextView loudandlow = findViewById(R.id.loudandlow);
@@ -87,6 +108,7 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
             Pass dialog = new Pass();
             dialog.levelPassed(3);
             dialog.show(getSupportFragmentManager(), "Pass");
+            mp.stop();
         }
     }
 

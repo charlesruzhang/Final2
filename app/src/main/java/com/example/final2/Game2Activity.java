@@ -36,7 +36,7 @@ public class Game2Activity extends AppCompatActivity {
     private final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 2;
     /** hint button. **/
     private Button hintButton;
-    private final double PROXIMITY = 0.0002;
+    private final double PROXIMITY = 0.002;
     private final double targetLatitude = 40.10483;
     private final double targetLongitude = -88.227009;
     @Override
