@@ -33,6 +33,7 @@ public class Game6Activity extends AppCompatActivity {
         start.setOnClickListener(v -> startStop());
         clickButton = findViewById(R.id.clickButton);
         clickButton.setOnClickListener(v -> clickCounting());
+        clickButton.setVisibility(View.INVISIBLE);
         win = findViewById(R.id.winSignal);
         hintButton = findViewById(R.id.hintButton);
         hintButton.setOnClickListener(v -> showHint());
@@ -51,6 +52,7 @@ public class Game6Activity extends AppCompatActivity {
             @Override
             public void onTick(long l) {
                 timeLeft = l;
+                clickButton.setVisibility(View.VISIBLE);
                 updateTimer();
             }
 
@@ -76,6 +78,7 @@ public class Game6Activity extends AppCompatActivity {
                 timerRunning = false;
                 if (click == 6) {
                     click = 0;
+                    clickButton.setVisibility(View.INVISIBLE);
                     win.setText("you pass");
                     win.setVisibility(View.VISIBLE);
                     Pass dialog = new Pass();
@@ -83,6 +86,7 @@ public class Game6Activity extends AppCompatActivity {
                     dialog.show(getSupportFragmentManager(), "Pass");
                 } else {
                     click = 0;
+                    clickButton.setVisibility(View.INVISIBLE);
                     win.setText("try again");
                     win.setVisibility(View.VISIBLE);
                 }
@@ -94,6 +98,7 @@ public class Game6Activity extends AppCompatActivity {
 
     private void stop() {
         countDownTimer.cancel();
+        clickButton.setVisibility(View.INVISIBLE);
         start.setText("start");
         timerRunning = false;
     }
