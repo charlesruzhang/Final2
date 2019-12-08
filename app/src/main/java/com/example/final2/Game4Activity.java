@@ -49,35 +49,18 @@ public class Game4Activity extends AppCompatActivity {
         int[][] generator = generate(line);
         for (int i = 0; i < line; i++) {
             Log.e("new", "this is " + i);
-            //View rowChunk = getLayoutInflater().inflate(R.layout.chunk_game4, table, false);
-            //RadioGroup tableChunk = rowChunk.findViewById(R.id.Tablechunk);
             LinearLayout tableChunk = new LinearLayout(this);
             tableChunk.setOrientation(LinearLayout.VERTICAL);
             for (int j = 0; j < line; j++) {
                 RadioButton newButton = new RadioButton(this);
                 newButton.setText(generator[i][j] + "");
                 newButton.setId(i * 100 + j);
-                newButton.setWidth(200);
-                newButton.setHeight(200);
+                newButton.setWidth(180);
+                newButton.setHeight(180);
                 newButton.setOnClickListener(unused -> check(newButton.getText().toString()));
                 tableChunk.addView(newButton);
             }
             table.addView(tableChunk);
-            /*Button bt1 = rowChunk.findViewById(R.id.bt1);
-            Button bt2 = rowChunk.findViewById(R.id.bt2);
-            Button bt3 = rowChunk.findViewById(R.id.bt3);
-            Button bt4 = rowChunk.findViewById(R.id.bt4);
-            Button bt5 = rowChunk.findViewById(R.id.bt5);
-
-            Button bt6 = rowChunk.findViewById(R.id.bt6);
-            bt1.setText(generator[i][0] + "");
-            bt1.setOnClickListener(unused -> check(bt1.getText().toString()));
-            bt2.setText(generator[i][1] + "");
-            bt3.setText(generator[i][2] + "");
-            bt4.setText(generator[i][3] + "");
-            bt5.setText(generator[i][4] + "");
-            bt6.setText(generator[i][5] + "");
-            table.addView(rowChunk);*/
         }
     }
 

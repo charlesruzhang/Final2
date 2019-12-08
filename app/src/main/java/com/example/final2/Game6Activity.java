@@ -1,8 +1,6 @@
 package com.example.final2;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
