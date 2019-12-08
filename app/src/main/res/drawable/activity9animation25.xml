@@ -1,0 +1,12 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/batteryempty"
+        android:duration="400"/>
+
+    <item
+        android:drawable="@drawable/battery25"
+        android:duration="400"/>
+
+</animation-list>
