@@ -18,12 +18,12 @@ public class Game4Activity extends AppCompatActivity {
     /** hint button. **/
     private Button hintButton;
     private final int line = 6;
-
+    private int presentNumber = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game4);
-
+        presentNumber = 0;
         /** hint button listener - please go to the showHint method at the end and add hint **/
         hintButton = findViewById(R.id.hintButton);
         hintButton.setOnClickListener(v -> showHint());
@@ -42,14 +42,15 @@ public class Game4Activity extends AppCompatActivity {
         for (int i = 0; i < line; i++) {
             Log.e("new", "this is " + i);
             View rowChunk = getLayoutInflater().inflate(R.layout.chunk_game4, table, false);
+
             Button bt1 = rowChunk.findViewById(R.id.bt1);
             Button bt2 = rowChunk.findViewById(R.id.bt2);
             Button bt3 = rowChunk.findViewById(R.id.bt3);
             Button bt4 = rowChunk.findViewById(R.id.bt4);
             Button bt5 = rowChunk.findViewById(R.id.bt5);
             Button bt6 = rowChunk.findViewById(R.id.bt6);
-            //TableLayout tableChunk = rowChunk.findViewById(R.id.Tablechunk);
             bt1.setText(generator[i][0] + "");
+            bt1.setOnClickListener(unused -> check(bt1.getText().toString()));
             bt2.setText(generator[i][1] + "");
             bt3.setText(generator[i][2] + "");
             bt4.setText(generator[i][3] + "");
@@ -64,10 +65,38 @@ public class Game4Activity extends AppCompatActivity {
         int[][] toReturn = new int[line][line];
         for (int i = 0; i < line; i++) {
             for (int j = 0; j < line; j++) {
-                toReturn[i][j] = i * 6 + j + 1;
+                boolean b = true;
+                int newInteger = 0;
+                while (b) {
+                    b = false;
+                    int newint = r.nextInt(line*line + 1);
+                    for (int k = 0; k <= i; k++) {
+                        for (int l = 0; l < line; l++) {
+                            if (newint == toReturn[k][l]) {
+                                b = true;
+                            }
+                        }
+                    }
+                    newInteger = newint;
+                    Log.e("ee", newInteger+"" + i + " " + j);
+                }
+                toReturn[i][j] = newInteger;
             }
         }
         return toReturn;
+    }
+
+    private void check(String text) {
+        int number = Integer.parseInt(text);
+        if (number == presentNumber) {
+            presentNumber++;
+        }
+        if (presentNumber == line * line + 1) {
+            onPause();
+            Pass dialog = new Pass();
+            dialog.levelPassed(4);
+            dialog.show(getSupportFragmentManager(), "Pass");
+        }
     }
     /** enter your hint for this level in this method. */
     private void showHint() {
