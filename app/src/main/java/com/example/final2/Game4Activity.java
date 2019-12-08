@@ -58,7 +58,6 @@ public class Game4Activity extends AppCompatActivity {
                 newButton.setText(generator[i][j] + "");
                 newButton.setId(i * 100 + j);
                 newButton.setWidth(200);
-
                 newButton.setHeight(200);
                 newButton.setOnClickListener(unused -> check(newButton.getText().toString()));
                 tableChunk.addView(newButton);
@@ -69,6 +68,7 @@ public class Game4Activity extends AppCompatActivity {
             Button bt3 = rowChunk.findViewById(R.id.bt3);
             Button bt4 = rowChunk.findViewById(R.id.bt4);
             Button bt5 = rowChunk.findViewById(R.id.bt5);
+
             Button bt6 = rowChunk.findViewById(R.id.bt6);
             bt1.setText(generator[i][0] + "");
             bt1.setOnClickListener(unused -> check(bt1.getText().toString()));
