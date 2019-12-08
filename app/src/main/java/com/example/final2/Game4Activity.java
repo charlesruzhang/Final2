@@ -63,6 +63,7 @@ public class Game4Activity extends AppCompatActivity {
                 tableChunk.addView(newButton);
             }
             table.addView(tableChunk);
+
             /*Button bt1 = rowChunk.findViewById(R.id.bt1);
             Button bt2 = rowChunk.findViewById(R.id.bt2);
             Button bt3 = rowChunk.findViewById(R.id.bt3);
