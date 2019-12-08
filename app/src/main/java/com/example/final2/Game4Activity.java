@@ -45,19 +45,21 @@ public class Game4Activity extends AppCompatActivity {
         present.setVisibility(View.VISIBLE);
         present.setText(presentNumber + "");
         LinearLayout table = findViewById(R.id.Table);
+        table.setOrientation(LinearLayout.HORIZONTAL);
         int[][] generator = generate(line);
         for (int i = 0; i < line; i++) {
             Log.e("new", "this is " + i);
             //View rowChunk = getLayoutInflater().inflate(R.layout.chunk_game4, table, false);
             //RadioGroup tableChunk = rowChunk.findViewById(R.id.Tablechunk);
             LinearLayout tableChunk = new LinearLayout(this);
-
+            tableChunk.setOrientation(LinearLayout.VERTICAL);
             for (int j = 0; j < line; j++) {
-                Button newButton = new Button(this);
+                RadioButton newButton = new RadioButton(this);
                 newButton.setText(generator[i][j] + "");
                 newButton.setId(i * 100 + j);
-                newButton.setWidth(60);
-                newButton.setHeight(60);
+                newButton.setWidth(200);
+
+                newButton.setHeight(200);
                 newButton.setOnClickListener(unused -> check(newButton.getText().toString()));
                 tableChunk.addView(newButton);
             }
