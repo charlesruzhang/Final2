@@ -24,7 +24,8 @@
         <TextView
             android:id="@+id/infotext"
             android:layout_width="match_parent"
-            android:layout_height="81dp" />
+            android:layout_height="80dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <ImageView
             android:id="@+id/full"

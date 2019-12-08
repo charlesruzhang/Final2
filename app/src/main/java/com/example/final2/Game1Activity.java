@@ -105,7 +105,7 @@ public class Game1Activity extends AppCompatActivity {
             ImageView half = findViewById(R.id.half);
             ImageView empty = findViewById(R.id.empty);
 
-            if (sensorInfotext.getText().toString().equals("tada finished") && event.values[1] > accNumber) {
+            if (sensorInfotext.getText().toString().equals("Finished") && event.values[1] > accNumber) {
                 Pass dialog = new Pass();
                 dialog.levelPassed(1);
                 dialog.show(getSupportFragmentManager(), "Pass");
@@ -115,7 +115,7 @@ public class Game1Activity extends AppCompatActivity {
 
             if (half.getVisibility() == View.VISIBLE && event.values[1] < (-1 * accNumber)
                     && sensorInfotext.getText().toString().equals("Drink it again")) {
-                sensorInfotext.setText("tada finished");
+                sensorInfotext.setText("Finished");
                 half.setVisibility(View.GONE);
                 empty.setVisibility(View.VISIBLE);
             }
