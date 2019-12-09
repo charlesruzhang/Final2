@@ -21,7 +21,7 @@
         android:layout_height="80dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="100dp"
-        android:background="null"
+        android:background="@null"
         android:scaleType="centerInside"
         android:src="@drawable/click"
         android:text="click"
