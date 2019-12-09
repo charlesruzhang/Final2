@@ -28,8 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/hintButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="140dp"
         android:text="Button" />
+
 
     <LinearLayout
         android:layout_below="@id/hintButton"
