@@ -46,7 +46,7 @@ public class Game1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game1);
-        setTitle("GAME1: Drinking Water");
+        setTitle("GAME1");
         setInitialViews();
 
         ImageView full = findViewById(R.id.full);

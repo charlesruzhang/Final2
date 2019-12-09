@@ -23,6 +23,7 @@ public class Game5Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game5);
+        setTitle("GAME5");
         answer = (int) (Math.random() * 100);
         Log.e("TEST", answer+"");
         TextView input = findViewById(R.id.input);

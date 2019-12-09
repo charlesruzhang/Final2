@@ -32,6 +32,7 @@ public class Game7Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game7);
+        setTitle("GAME7");
         myVibrator = (Vibrator) getSystemService(Service.VIBRATOR_SERVICE);
 
         TextView finishtext = findViewById(R.id.testtext);

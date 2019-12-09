@@ -39,6 +39,7 @@ public class Game9Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game9);
+        setTitle("GAME9");
         text = findViewById(R.id.myluxvavlue);
         currentpercent = findViewById(R.id.currentp);
         mySensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -106,11 +107,14 @@ public class Game9Activity extends AppCompatActivity {
                     dialog.show(getSupportFragmentManager(), "Pass");
                     onPause();
                 }
-                text.setText("Value is: " + myLux);
+                if (myLux <= 600) {
+                    text.setText("umm, Not enough sunlight");
+                }
                 currentpercent.setText(i + "%");
                 progressBar.setProgress(i);
                 if (myLux > 600) {
                     i = i + 1;
+                    text.setText("It works!");
                 }
             }
         }

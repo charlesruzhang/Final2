@@ -26,6 +26,7 @@ public class Game4Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game4);
+        setTitle("GAME4");
         findViewById(R.id.presentNumber).setVisibility(View.INVISIBLE);
         presentNumber = 0;
         /** hint button listener - please go to the showHint method at the end and add hint **/
