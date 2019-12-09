@@ -119,7 +119,7 @@ public class Game2Activity extends AppCompatActivity {
             Pass dialog = new Pass();
             dialog.levelPassed(2);
             dialog.show(getSupportFragmentManager(), "Pass");
-            onPause();
+            onDestroy();
             return true;
         }
         return false;
@@ -142,5 +142,10 @@ public class Game2Activity extends AppCompatActivity {
                 return;
             }
         }
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        locationManager.removeUpdates(locationListener);
     }
 }
