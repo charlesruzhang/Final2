@@ -104,6 +104,8 @@ public class Game2Activity extends AppCompatActivity {
         Log.d(TAG,"定位成功------->"+"location------>经度为：" + location.getLatitude() + "\n纬度为" + location.getLongitude());
         TextView latitudeText = findViewById(R.id.LatitudeText);
         TextView longigudeText = findViewById(R.id.LongitudeText);
+        boolean bol = checkLocation(location);
+
         latitudeText.setText("Your Latitude "  + location.getLatitude() + "");
         longigudeText.setText("Your Longitude " + location.getLongitude() + "");
         TextView latiDif = findViewById(R.id.LatitudeDif);
