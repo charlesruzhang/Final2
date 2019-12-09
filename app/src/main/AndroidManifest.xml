@@ -22,7 +22,6 @@
         <activity android:name=".Game3Activity" />
         <activity android:name=".Game2Activity" />
         <activity android:name=".Game1Activity" />
-        <activity android:name=".GameActivity" />
         <activity android:name=".CatalogActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
