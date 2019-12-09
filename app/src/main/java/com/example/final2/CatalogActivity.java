@@ -1,7 +1,10 @@
 package com.example.final2;
 
 import android.content.Intent;
+import android.media.Image;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -35,6 +38,7 @@ public class CatalogActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalog);
+        AFactory.catalogActivity = this;
         /*LinearLayout gameList = findViewById(R.id.GameList);
         for (int i = 0; i < countGame; i++) {
             View GameChunk = getLayoutInflater().inflate(R.layout.chunk_game4, gameList, false);
@@ -42,6 +46,9 @@ public class CatalogActivity extends AppCompatActivity {
             int index = i;
             gameButton.setOnClickListener(unused -> enterGame(index));
         }*/
+        start();
+    }
+    private void start() {
         game1 = findViewById(R.id.game1);
         game1.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game1Activity.class);
@@ -71,16 +78,14 @@ public class CatalogActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Game5Activity.class);
             startActivity(intent);
         });
-
+        if (unPlayedGames.indexOf("5") == -1) {
+            game5.setBackgroundResource(R.drawable.f_05);
+        }
         game6 = findViewById(R.id.game6);
         game6.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game6Activity.class);
             startActivity(intent);
         });
-        if (unPlayedGames.indexOf("6") == -1) {
-            game6.setBackgroundResource(R.drawable.f_06);
-        }
-
         game7 = findViewById(R.id.game7);
         game7.setOnClickListener(unused -> {
             Intent intent = new Intent(this, Game7Activity.class);
@@ -98,23 +103,52 @@ public class CatalogActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Game9Activity.class);
             startActivity(intent);
         });
+        if (unPlayedGames.indexOf("1") == -1) {
+            game1.setImageResource(R.drawable.f_01);
+        }
+        if (unPlayedGames.indexOf("2") == -1) {
+            game2.setImageResource(R.drawable.f_02);
+        }
+        if (unPlayedGames.indexOf("3") == -1) {
+            game3.setImageResource(R.drawable.f_03);
+        }
+        if (unPlayedGames.indexOf("4") == -1) {
+            game4.setImageResource(R.drawable.f_04);
+        }
+        if (unPlayedGames.indexOf("5") == -1) {
+            game5.setImageResource(R.drawable.f_05);
+        }
+        if (unPlayedGames.indexOf("6") == -1) {
+            game6.setImageResource(R.drawable.f_06);
+        }
+        if (unPlayedGames.indexOf("7") == -1) {
+            game7.setImageResource(R.drawable.f_07);
+        }
+        if (unPlayedGames.indexOf("8") == -1) {
+            game8.setImageResource(R.drawable.f_08);
+        }
+        if (unPlayedGames.indexOf("9") == -1) {
+            game9.setImageResource(R.drawable.f_09);
+        }
     }
 
-    public static void resetGameList() {
+    public void resetGameList() {
         unPlayedGames = new ArrayList<>(
                 Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9"));
     }
 
-    public static void passGame(int gameLevel) {
+    public void passGame(int gameLevel) {
         String index = "" + gameLevel;
+        Log.e("333", "hi");
         unPlayedGames.remove(index);
+        start();
     }
 
-    public static int getSize() {
+    public int getSize() {
         return unPlayedGames.size();
     }
 
-    public static int getLevel(int index) {
+    public int getLevel(int index) {
         Integer a = Integer.valueOf(unPlayedGames.get(index));
         return a;
     }

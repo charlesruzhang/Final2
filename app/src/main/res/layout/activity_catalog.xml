@@ -38,9 +38,9 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="centerInside"
-                android:src="@drawable/f_01"
-                tools:src="@drawable/f_01"
-                tools:srcCompat="@drawable/f_01" />
+                android:src="@drawable/c1"
+                tools:src="@drawable/c1"
+                tools:srcCompat="@drawable/c1" />
 
             <ImageButton
                 android:id="@+id/game2"
@@ -50,9 +50,9 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="centerInside"
-                android:src="@drawable/f_02"
-                tools:src="@drawable/f_02"
-                tools:srcCompat="@drawable/f_02" />
+                android:src="@drawable/c2"
+                tools:src="@drawable/c2"
+                tools:srcCompat="@drawable/c2" />
 
             <ImageButton
                 android:id="@+id/game3"
@@ -62,9 +62,9 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="centerInside"
-                android:src="@drawable/f_03"
-                tools:src="@drawable/f_03"
-                tools:srcCompat="@drawable/f_03" />
+                android:src="@drawable/c3"
+                tools:src="@drawable/c3"
+                tools:srcCompat="@drawable/c3" />
         </TableRow>
 
         <TableRow
@@ -79,9 +79,9 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="centerInside"
-                android:src="@drawable/f_04"
-                tools:src="@drawable/f_04"
-                tools:srcCompat="@drawable/f_04" />
+                android:src="@drawable/c4"
+                tools:src="@drawable/c4"
+                tools:srcCompat="@drawable/c4" />
 
             <ImageButton
                 android:id="@+id/game5"
@@ -91,9 +91,9 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="centerInside"
-                android:src="@drawable/f_05"
-                tools:src="@drawable/f_05"
-                tools:srcCompat="@drawable/f_05" />
+                android:src="@drawable/c5"
+                tools:src="@drawable/c5"
+                tools:srcCompat="@drawable/c5" />
 
             <ImageButton
                 android:id="@+id/game6"
@@ -103,9 +103,9 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="centerInside"
-                android:src="@drawable/f_06"
-                tools:src="@drawable/f_06"
-                tools:srcCompat="@drawable/f_06" />
+                android:src="@drawable/c6"
+                tools:src="@drawable/c6"
+                tools:srcCompat="@drawable/c6" />
         </TableRow>
 
         <TableRow
@@ -120,9 +120,9 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="centerInside"
-                android:src="@drawable/f_07"
-                tools:src="@drawable/f_07"
-                tools:srcCompat="@drawable/f_07" />
+                android:src="@drawable/c7"
+                tools:src="@drawable/c7"
+                tools:srcCompat="@drawable/c7" />
 
             <ImageButton
                 android:id="@+id/game8"
@@ -132,9 +132,9 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="centerInside"
-                android:src="@drawable/f_08"
-                tools:src="@drawable/f_08"
-                tools:srcCompat="@drawable/f_08" />
+                android:src="@drawable/c8"
+                tools:src="@drawable/c8"
+                tools:srcCompat="@drawable/c8" />
 
             <ImageButton
                 android:id="@+id/game9"
@@ -144,9 +144,9 @@
                 android:adjustViewBounds="true"
                 android:background="@null"
                 android:scaleType="centerInside"
-                android:src="@drawable/f_09"
-                tools:src="@drawable/f_09"
-                tools:srcCompat="@drawable/f_09" />
+                android:src="@drawable/c9"
+                tools:src="@drawable/c9"
+                tools:srcCompat="@drawable/c9" />
         </TableRow>
 
     </TableLayout>

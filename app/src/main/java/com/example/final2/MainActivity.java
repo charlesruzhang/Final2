@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void getToNewGamePage() {
-        CatalogActivity.resetGameList();
+        //AFactory.catalogActivity.resetGameList();
+
         Intent intent = new Intent(this, CatalogActivity.class);
         startActivity(intent);
         finish();

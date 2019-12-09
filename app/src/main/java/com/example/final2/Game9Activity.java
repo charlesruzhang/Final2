@@ -70,6 +70,8 @@ public class Game9Activity extends AppCompatActivity {
         @Override
         public void onSensorChanged(SensorEvent sensorEvent) {
             Log.e("I", i+"");
+
+            //Animation
             if (i >=0 && i <= 5) {
                 batteryanimate.setBackgroundResource(R.drawable.activity9animation0);
                 battery1 = (AnimationDrawable) batteryanimate.getBackground();
@@ -108,7 +110,7 @@ public class Game9Activity extends AppCompatActivity {
                     onPause();
                 }
                 if (myLux <= 600) {
-                    text.setText("umm, Not enough sunlight");
+                    text.setText("ummm, Not enough light");
                 }
                 currentpercent.setText(i + "%");
                 progressBar.setProgress(i);
@@ -127,7 +129,7 @@ public class Game9Activity extends AppCompatActivity {
     /** enter your hint for this level in this method. **/
     private void showHint() {
         Hint dialog = new Hint();
-        dialog.addHint("Using the sunlight");
+        dialog.addHint("Using the sunlight energy");
         dialog.show(getSupportFragmentManager(), "Hint");
     }
 }
