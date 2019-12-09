@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 public class Game2Activity extends AppCompatActivity {
     private String TAG = "Game2";
+
     private LocationManager locationManager;
     private String provider;
     private Context mContext = null;
@@ -36,7 +37,8 @@ public class Game2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game2);
-        System.out.println("HEL1");
+        setTitle("GAME2");
+
 
         TextView latitudeText = findViewById(R.id.LatitudeText);
         TextView longigudeText = findViewById(R.id.LongitudeText);

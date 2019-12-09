@@ -26,6 +26,7 @@ public class Game6Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game6);
+        setTitle("GAME6");
         timer = findViewById(R.id.timer);
         start = findViewById(R.id.start);
         start.setOnClickListener(v -> startStop());

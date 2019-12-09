@@ -16,6 +16,7 @@
         android:text="hint" />
 
     <LinearLayout
+        android:layout_below="@id/hintButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -51,7 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:layout_weight="1"
-                android:text="0%" />
+                android:text="0%"
+                android:visibility="invisible" />
 
         </LinearLayout>
 

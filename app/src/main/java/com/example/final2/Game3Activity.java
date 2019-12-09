@@ -32,6 +32,7 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game3);
         Button playButton = findViewById(R.id.playbutton);
+        setTitle("GAME3");
         /** hint button listener - please go to the showHint method at the end and add hint **/
         hintButton = findViewById(R.id.hintButton);
         hintButton.setOnClickListener(v -> showHint());
