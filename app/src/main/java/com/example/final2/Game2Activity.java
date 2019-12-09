@@ -105,6 +105,7 @@ public class Game2Activity extends AppCompatActivity {
         TextView latitudeText = findViewById(R.id.LatitudeText);
         TextView longigudeText = findViewById(R.id.LongitudeText);
         boolean bol = checkLocation(location);
+
         latitudeText.setText("Your Latitude "  + location.getLatitude() + "");
         longigudeText.setText("Your Longitude " + location.getLongitude() + "");
         TextView latiDif = findViewById(R.id.LatitudeDif);
