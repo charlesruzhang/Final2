@@ -26,10 +26,12 @@ public class Pass extends DialogFragment {
         continueButton = view.findViewById(R.id.continueButton);
         returnButton.setOnClickListener(v -> {
             AFactory.catalogActivity.passGame(currentLevel);
+            this.dismiss();
             getActivity().finish();
         });
         continueButton.setOnClickListener(v -> {
             AFactory.catalogActivity.passGame(currentLevel);
+            this.dismiss();
             getActivity().finish();
             if (AFactory.catalogActivity.getSize() == 0) {
                 AFactory.catalogActivity.winGame();
