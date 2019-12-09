@@ -18,6 +18,9 @@ public class Game8Activity extends AppCompatActivity {
         /** hint button listener - please go to the showHint method at the end and add hint **/
         hintButton = findViewById(R.id.hintButton);
         hintButton.setOnClickListener(v -> showHint());
+        Pass dialog = new Pass();
+        dialog.levelPassed(8);
+        dialog.show(getSupportFragmentManager(), "Pass");
     }
 
     /** enter your hint for this level in this method. **/

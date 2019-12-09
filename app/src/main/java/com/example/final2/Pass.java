@@ -1,20 +1,15 @@
 package com.example.final2;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
-
-import java.lang.ref.WeakReference;
 
 public class Pass extends DialogFragment {
     private static final String TAG = "Pass";
@@ -30,16 +25,16 @@ public class Pass extends DialogFragment {
         returnButton = view.findViewById(R.id.returnToCatalog);
         continueButton = view.findViewById(R.id.continueButton);
         returnButton.setOnClickListener(v -> {
-            CatalogActivity.passGame(currentLevel);
+            AFactory.catalogActivity.passGame(currentLevel);
             getActivity().finish();
         });
         continueButton.setOnClickListener(v -> {
-            CatalogActivity.passGame(currentLevel);
+            AFactory.catalogActivity.passGame(currentLevel);
             getActivity().finish();
-            if (CatalogActivity.getSize() == 0) {
+            if (AFactory.catalogActivity.getSize() == 0) {
                 return;
             } else {
-                int nextLevel = CatalogActivity.getLevel(0);
+                int nextLevel = AFactory.catalogActivity.getLevel(0);
                 if (nextLevel == 1) {
                     Intent intent = new Intent(inflater.getContext(), Game1Activity.class);
                     startActivity(intent);
