@@ -38,11 +38,11 @@
         <Button
             android:id="@+id/startButton4"
             android:layout_width="132dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_marginStart="140dp"
             android:layout_marginLeft="130dp"
             android:layout_marginTop="500dp"
-            android:text="Button" />
+            android:text="StartGame" />
 
     </LinearLayout>
 
