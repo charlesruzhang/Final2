@@ -15,16 +15,21 @@
         android:layout_alignParentRight="true"
         android:text="hint" />
 
-    <Button
+    <ImageButton
         android:id="@+id/clickButton"
-        android:layout_width="121dp"
-        android:layout_height="78dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="100dp"
-        android:stateListAnimator="@null"
+        android:background="null"
+        android:scaleType="centerInside"
+        android:src="@drawable/click"
         android:text="click"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/click"
+        tools:srcCompat="@drawable/click" />
 
     <TextView
         android:id="@+id/timer"
