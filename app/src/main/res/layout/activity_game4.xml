@@ -14,6 +14,23 @@
         android:layout_alignParentRight="true"
         android:text="hint" />
 
+    <TextView
+        android:id="@+id/presentNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hintButton"
+        android:layout_centerHorizontal="true"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/startButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hintButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="140dp"
+        android:text="Button" />
+
     <LinearLayout
         android:layout_below="@id/hintButton"
         android:id="@+id/Table"
@@ -21,28 +38,6 @@
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:orientation="vertical">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/presentNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
-        <Button
-            android:id="@+id/startButton4"
-            android:layout_width="132dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="140dp"
-            android:layout_marginLeft="130dp"
-            android:layout_marginTop="500dp"
-            android:text="Button" />
 
     </LinearLayout>
 
