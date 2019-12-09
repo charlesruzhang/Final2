@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 /** button clicking.
@@ -15,7 +16,7 @@ public class Game6Activity extends AppCompatActivity {
     private int click = 0;
     private TextView timer;
     private Button start;
-    private Button clickButton;
+    private ImageButton clickButton;
     private TextView win;
     private Button hintButton;
     private CountDownTimer countDownTimer;
@@ -32,7 +33,6 @@ public class Game6Activity extends AppCompatActivity {
         start.setOnClickListener(v -> startStop());
         clickButton = findViewById(R.id.clickButton);
         clickButton.setOnClickListener(v -> clickCounting());
-        clickButton.setVisibility(View.INVISIBLE);
         win = findViewById(R.id.winSignal);
         hintButton = findViewById(R.id.hintButton);
         hintButton.setOnClickListener(v -> showHint());
@@ -60,6 +60,7 @@ public class Game6Activity extends AppCompatActivity {
                 timeLeft = 10000;
                 timer.setText("10");
                 start.setText("start");
+                clickButton.setVisibility(View.INVISIBLE);
                 timerRunning = false;
                 if (click == 6) {
                     click = 0;
@@ -93,6 +94,7 @@ public class Game6Activity extends AppCompatActivity {
         }.start();
         start.setText("stop");
         timerRunning = true;
+        clickButton.setVisibility(View.VISIBLE);
     }
 
     private void stop() {
