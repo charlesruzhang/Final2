@@ -93,7 +93,6 @@ public class Game4Activity extends AppCompatActivity {
 
     private void check(String text) {
         int number = Integer.parseInt(text);
-        Log.e("jjj", number + "");
         if (number == presentNumber + 1) {
             presentNumber++;
             TextView present = findViewById(R.id.presentNumber);

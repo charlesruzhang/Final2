@@ -32,6 +32,7 @@ public class Pass extends DialogFragment {
             AFactory.catalogActivity.passGame(currentLevel);
             getActivity().finish();
             if (AFactory.catalogActivity.getSize() == 0) {
+                AFactory.catalogActivity.winGame();
                 return;
             } else {
                 int nextLevel = AFactory.catalogActivity.getLevel(0);
