@@ -144,4 +144,9 @@ public class Game2Activity extends AppCompatActivity {
             }
         }
     }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        locationManager.removeUpdates(locationListener);
+    }
 }
