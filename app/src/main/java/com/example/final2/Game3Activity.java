@@ -37,7 +37,7 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
         hintButton = findViewById(R.id.hintButton);
         hintButton.setOnClickListener(v -> showHint());
 
-        MediaPlayer mp = MediaPlayer.create(this, R.raw.quit);
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.game3music);
 
 
         playButton.setOnClickListener(unused -> {
@@ -116,7 +116,7 @@ public class Game3Activity extends AppCompatActivity implements VolumeChangeObse
     /** enter your hint for this level in this method. */
     private void showHint() {
         Hint dialog = new Hint();
-        dialog.addHint("Maybe turn on the music ?");
+        dialog.addHint("Maybe turn on the music and use the volume button?");
         dialog.show(getSupportFragmentManager(), "Hint");
     }
 }
