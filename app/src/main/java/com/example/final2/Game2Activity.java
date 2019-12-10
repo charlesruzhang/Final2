@@ -121,7 +121,6 @@ public class Game2Activity extends AppCompatActivity {
             Pass dialog = new Pass();
             dialog.levelPassed(2);
             dialog.show(getSupportFragmentManager(), "Pass");
-            onDestroy();
             return true;
         }
         return false;

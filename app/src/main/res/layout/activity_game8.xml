@@ -14,11 +14,13 @@
         android:layout_alignParentRight="true"
         android:text="hint" />
 
-    <Button
+    <ImageButton
         android:id="@+id/click"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/batteryempty"
+        android:text="Button"
+        tools:src="@drawable/batteryempty" />
 
     <TextView
         android:id="@+id/time"
