@@ -47,24 +47,25 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/LongitudeDif"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="TextView"
-                android:textSize="32dp" />
-
-            <TextView
                 android:id="@+id/LongitudeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="TextView"
-                android:textSize="32dp"
+                android:textSize="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/LongitudeDif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textSize="12dp" />
+
         </TableRow>
 
     </TableLayout>

@@ -105,6 +105,7 @@ public class Game2Activity extends AppCompatActivity {
         TextView latitudeText = findViewById(R.id.LatitudeText);
         TextView longigudeText = findViewById(R.id.LongitudeText);
         boolean bol = checkLocation(location);
+
         latitudeText.setText("Your Latitude "  + location.getLatitude() + "");
         longigudeText.setText("Your Longitude " + location.getLongitude() + "");
         TextView latiDif = findViewById(R.id.LatitudeDif);
@@ -120,7 +121,6 @@ public class Game2Activity extends AppCompatActivity {
             Pass dialog = new Pass();
             dialog.levelPassed(2);
             dialog.show(getSupportFragmentManager(), "Pass");
-            onPause();
             return true;
         }
         return false;
@@ -143,5 +143,10 @@ public class Game2Activity extends AppCompatActivity {
                 return;
             }
         }
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        locationManager.removeUpdates(locationListener);
     }
 }
