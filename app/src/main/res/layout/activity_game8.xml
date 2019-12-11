@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Game8Activity"
-    android:background="@color/backGround">
+    android:background="@color/backGround" >
 
     <Button
         android:id="@+id/hintButton"
@@ -14,16 +14,31 @@
         android:layout_alignParentRight="true"
         android:text="hint" />
 
-    <Button
-        android:id="@+id/click"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        <ImageButton
+            android:id="@+id/jeff"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/jeff"
+            android:text="jeff"
+            tools:src="@drawable/jeff"
+            android:scaleType="centerInside"
+            android:background="@null"/>
+
+        <TextView
+            android:id="@+id/times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="32dp"
+            android:textColor="@color/designBlue"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
