@@ -6,14 +6,16 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.os.CountDownTimer;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Game8Activity extends AppCompatActivity {
 
     /** hint button. **/
     private Button hintButton;
-    private Button jeff;
+    private ImageButton jeff;
     private TextView times;
+    private Button reset;
     private int num = 0;
 
     @Override
@@ -38,7 +40,11 @@ public class Game8Activity extends AppCompatActivity {
             test();
             return true;
         });
-
+        reset = findViewById(R.id.button);
+        reset.setOnClickListener(v -> {
+            num = 0;
+            times.setText("" + num);
+        });
     }
 
     private void test() {
